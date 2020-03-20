@@ -1,53 +1,161 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-		<title>Google</title>
+		
+		<meta name="apple-itunes-app" content="app-id=1261483635">
+		<meta name="google-play-app" content="app-id=com.aeries.mobileportal">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta charset="utf-8">
+		<link rel="apple-touch-icon" href="https://napavalleyusd.asp.aeries.net/student/images/aeries-logo-a.png"/>
+	
+		<title>
+			Aeries: Portals
+		</title>
+				
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="shortcut icon" href="https://napavalleyusd.asp.aeries.net/student/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="https://napavalleyusd.asp.aeries.net/student/favicon.ico" type="image/x-icon" />
+		
+		<link rel="stylesheet" type="text/css" href="https://napavalleyusd.asp.aeries.net/student/StyleSheets/font-awesome/font-awesome.min.css" />
+		<link href="https://napavalleyusd.asp.aeries.net/student/m/styles/aeries.mobile.font.open.sans.css?vsn=9.20.3.12" rel="Stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://napavalleyusd.asp.aeries.net/student//Sofia.css" />
+		<link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+
+		<link href="https://napavalleyusd.asp.aeries.net/student/StyleSheets/bootstrap/bootstrap.css" rel="stylesheet">
+		<link href="https://napavalleyusd.asp.aeries.net/student/StyleSheets/aeries-student-login.css?vsn=9.20.3.12" rel="stylesheet">
+		<link href="https://napavalleyusd.asp.aeries.net/student/StyleSheets/language.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://napavalleyusd.asp.aeries.net/student/KendoUI/kendo.default.min.css?v=2017.1.118" />
+		<link rel="stylesheet" type="text/css" href="https://napavalleyusd.asp.aeries.net/student/KendoUI/kendo.common.min.css?v=2017.1.118" />
+
+		<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>		
 	</head>
-	<body>
-		<header>
-			<a href="https://mail.google.com">Gmail</a>
-			<a href="https://www.google.com/imghp?hl=en&tab=wi&ei=Ox1NVMXuJYO3yATCjoFA&ved=0CAQQqi4oAg">Images</a>
-			<img id="products" src="products.png"/>
-			<img id="lara" class="headerpics" src="http://lh3.googleusercontent.com/-zkPWifjxy1M/AAAAAAAAAAI/AAAAAAAAAAA/7pAALFnncq4/s32-c/photo.jpg"/>
-		</header>
-		<div>
-			<img src="https://www.google.com/images/srpr/logo11w.png"/>
-			<form action="no-js" method="get" id="unblocker-form">
-				<p><input type="text" id="url" name="url" autofocus="autofocus" class="search">
-					<input type="submit" value="Go">
-				</p>
 
-			</form>
-			<form name="google" action="#" method="POST"><br>
-				<input type="submit" class="button" name="submit" value="Google Search">
-				<input type="submit" class="button" name="lucky" value="I'm Feeling Lucky">
-			</form>
+	<!--[if lt IE 9 ]> <script>window.location.replace("OldBrowser.aspx");</script> <![endif]-->
+<!--[if (IE)]><body id="TheBody" class="OldIE"><![endif]-->
+<!--[if !(IE)]><!--><body id="TheBody" class="ModernBrowser"><!--<![endif]-->
+		<div class="m-wrap m-invisible" data-role="content">
+			<!-- start Login box -->
+			<div class="container" id="login-block" data-step="username">
 
-			  <div class="container">
+						<div class="login-box clearfix">
 
-    <div class="main">
+                       
+							<div class="language-wrapper">
+								<select id="language">
+									<option value="00" selected="selected">English</option>
+									<option value="01">Español</option>
+									<option value="02">Việt</option>
+									<option value="03">中文</option>
+									<option value="04">한국어</option>
+									<option value="11">العربية</option>
+									<option value="12">Հայերեն</option>
+								</select>
+								<div class="caret"></div>
+							</div>
+                       
+							<div class="login-logo">
+			        			<img src="https://napavalleyusd.asp.aeries.net/student/images/Combomark_Transparent.svg" width="213" height="170" onerror="this.src='https://napavalleyusd.asp.aeries.net/student/images/Combomark_Transparent.png'; this.onerror=null;" alt="Aeries Student Information System" onclick="externalLink('https://www.aeries.com'); return false;" class="clickable" />
+							</div> 
+							<hr />
+							<div class="login-form">
 
+			        			<!-- Start Error box -->
+			        			<div id="errorContainer" class="alert alert-danger" style="display:none;">
+									<button id="portalCloseError" type="button" class="close"> &times;</button>
+									<span id="errorMessage" class="error" data-pw-error="You must enter a password!" data-username-error="You must enter a User Name!"></span>
+								</div> <!-- End Error box -->
+                          
+			        			<form method="post" novalidate="novalidate">
+                                    
+									<input id="checkCookiesEnabled" name="checkCookiesEnabled" type="hidden" value="false">
+									<input id="checkMobileDevice" name="checkMobileDevice" type="hidden" value="false">
+									<input id="checkStandaloneMode" name="checkStandaloneMode" type="hidden" value="false">
+									<input id="checkTabletDevice" name="checkTabletDevice" type="hidden" value="false">             
+						
+									<div id="credentials">
+										<div id="namepass">
+											<div id="name" class="username">
+												<input id="portalAccountUsername" name="portalAccountUsername" class="" type="email" maxlength="255" placeholder="Email" required="required" value="">												
+												<button id="next" type="button" class="btn btn-login">Next</button>
+											</div>
+											
+											<div id="pass" class="password">
+												<i id="portalBackArrow" class="fa fa-chevron-left"></i>
+												<input id="portalAccountPassword" name="portalAccountPassword" class="" type="password" maxlength="255" placeholder="Password" required="required">
+												<input id="portalAccountUsernameLabel" name="portalAccountUsernameLabel" class="" maxlength="255" readonly="true">
+												<input id="g-recaptcha-request-token" name="g-recaptcha-request-token" type="hidden" value="" />
+												<button id="LoginButton" name="submit" type="submit" class="btn btn-login" onclick="if(!isComplete()){ return false; }">Sign In</button>
+											</div>
+										</div>
+						   			</div>
+								</form>	
+                          
+								<div class="login-links"> 
+									<!-- Forgot password -->
+									<a href="https://napavalleyusd.asp.aeries.net/student/LostPassword.aspx" id="forgotPassword" class="account-links">Forgot Password?</a>
+					
+									<!-- Create new account -->
+												
+								</div>      		
+							</div> 		
+							
+						</div>
 
+				
+					<div class="login-box">
+						<div class="login-app">
+							Get the Aeries Mobile Portal App!
+							<div class="login-app-logos">
+								<a href="https://itunes.apple.com/us/app/aeries-mobile-portal/id1261483635?mt=8" target="_blank" class="apple-link"><img src="https://napavalleyusd.asp.aeries.net/student/images/apple-store-badge.svg" onerror="this.src='https://napavalleyusd.asp.aeries.net/student/images/apple-store-badge.png'; this.onerror=null;" alt="Aeries Student Information System" /></a>
+								<a href="https://play.google.com/store/apps/details?id=com.aeries.mobileportal" target="_blank" class="google-link"><img src="https://napavalleyusd.asp.aeries.net/student/images/google-play-badge.svg" onerror="this.src='https://napavalleyusd.asp.aeries.net/student/images/google-play-badge.png'; this.onerror=null;" alt="Aeries Student Information System" /></a>
+							</div>
+						</div> 	        	
+					</div>
+							
+				
+			</div>
 
-      <div id="error"></div>
-
-
-
-
-
-
-
-
-
-	</div>
-
-    <div class="footer">
-
-    </div>
-
+			<div class="g-recaptcha"
+       data-sitekey=""
+       data-callback="onSubmit"
+       data-size="invisible">
   </div>
+
+			<!-- End New Login Markup -->
+
+
+
+		<!-- Sticky Footer -->
+		<div class="footer">
+			<!-- Copyright -->
+			<div>&copy;
+				1995-2020
+				
+				<img src="images/AeriesSideByLogo.png" height="20" alt="" onclick="externalLink('https://www.aeries.com'); return false;" class="clickable" />
+			</div>
+
+			<!-- Product Version -->
+			<div id="productVersion">
+				v9.20.3.12
+			</div>	
+		</div>
+
+		<style type="text/css">
+			.grecaptcha-badge {
+				bottom: 45px !important;
+			}
+			@media (max-width: 1023px) {
+				.grecaptcha-badge {
+					position: static !important;
+					margin: 0 auto 80px !important;
+				}
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="https://napavalleyusd.asp.aeries.net/student/ClientScripts/demo-feedback_css.css" />
 	<script>
 		function $(id){
 			return document.getElementById(id);
@@ -82,12 +190,5 @@
 		}
 	</script>
 		</div>
-		<footer>
-			<a class="leftlinks" href="https://www.google.com/intl/en/ads/?fg=1">Advertising</a>
-			<a class="leftlinks" href="https://www.google.com/services/?fg=1">Business</a>
-			<a class="leftlinks" href="https://www.google.com/intl/en/about/">About</a>
-			<a class="rightlinks" href="https://www.google.com/preferences?hl=en">Settings</a>
-			<a class="rightlinks" href="https://www.google.com/intl/en/policies/?fg=1">Privacy & Terms</a>
-		</footer>
 	</body>
 </html>
